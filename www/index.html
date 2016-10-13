@@ -1,0 +1,32 @@
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>欢迎使用chatroom</title>
+	<link rel="stylesheet" type="text/css" href="./chat.css" />
+
+</head>
+
+<head>
+	<div id="app">
+		<header id="header">
+			<span>websocket聊天室</span>
+		</header>
+		<div id="content">
+			<div id="info">connect to server...</div>
+		</div>
+		<div id="panel">
+			<div>
+				<textarea class="input"></textarea>
+				<button id="btn_send">发送（S）</button>
+			</div>
+		</div>
+
+	</div>
+	<script src="//cdn.bootcss.com/zepto/1.0rc1/zepto.min.js"></script>
+	<script src="//cdn.bootcss.com/socket.io/1.5.0/socket.io.js"></script>
+	<script type="text/javascript" src="./chat.js"></script>
+</head>
+
+</html>
