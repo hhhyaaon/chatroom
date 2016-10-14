@@ -20,7 +20,7 @@ $(function () {
     function initWebSocket() {
         socket = io.connect();
         socket.on("connect", function () {
-            
+            console.log("链接");
         });
     }
 

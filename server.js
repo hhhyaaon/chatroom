@@ -7,6 +7,7 @@ var app = express();
 var server = http.createServer(app);
 
 app.use("/", express.static(__dirname + "/www"));
+app.use("/components", express.static(__dirname + "/components"));
 
 // app.get("/", function (req, res) {
 //     res.sendFile(path.join(__dirname, "./views/index.html"));

@@ -1,0 +1,26 @@
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Message</title>
+	<link rel="stylesheet" type="text/css" href="./message.css" />
+
+</head>
+
+<body>
+	<div id="message"></div>
+	<script src="//cdn.bootcss.com/zepto/1.0rc1/zepto.min.js"></script>
+	<script type="text/javascript" src="../core/core.js"></script>
+	<script type="text/javascript" src="./message.js"></script>
+	<script>
+        $(function(){
+            var message = new window.hy.message({
+                element: $("#message")
+            });
+           
+        })
+    </script>
+</body>
+
+</html>
