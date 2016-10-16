@@ -7,11 +7,13 @@ var app = express();
 var server = http.createServer(app);
 
 app.use("/", express.static(__dirname + "/www"));
-app.use("/components", express.static(__dirname + "/components"));
 
-// app.get("/", function (req, res) {
-//     res.sendFile(path.join(__dirname, "./views/index.html"));
-// });
+app.get("/chat", function (req, res) {
+    res.sendFile(path.join(__dirname, "./www/views/chat.html"));
+});
+app.get("/login", function (req, res) {
+    res.sendFile(path.join(__dirname, "./www/views/login.html"));
+});
 
 server.listen(3333);
 console.log("listen at localhost:3333");

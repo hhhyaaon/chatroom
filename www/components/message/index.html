@@ -10,6 +10,11 @@
 
 <body>
 	<div id="message"></div>
+	<div style="padding-top:50px;">
+		<button id="btn_show">显示</button>
+		<button id="btn_hide">隐藏</button>
+		<button id="btn_replace">替换内容</button>
+	</div>
 	<script src="//cdn.bootcss.com/zepto/1.0rc1/zepto.min.js"></script>
 	<script type="text/javascript" src="../core/core.js"></script>
 	<script type="text/javascript" src="./message.js"></script>
@@ -20,6 +25,19 @@
 				content:"测试显示啊啊啊"
             });
            console.log(message);
+
+		   //显示
+		   $("#btn_show").click(function(){
+			   message.show("这是一条全局信息");
+		   });
+		   //隐藏
+		   $("#btn_hide").click(function(){
+			   message.hide();
+		   });
+		   //替换内容
+		   $("#btn_replace").click(function(){
+			   message.show("这是另一条全局信息");
+		   })
         })
     </script>
 </body>

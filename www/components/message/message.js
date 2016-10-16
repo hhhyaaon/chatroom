@@ -36,17 +36,29 @@
         function createDom() {
             var $box = $("<div>")
                 .append(
-                    $("<span>").text(_cfg.content)
-                ).addClass("hy_message");
+                $("<span>").text(_cfg.content).addClass("hy_message_ctn")
+                ).addClass("hy_message hy_message_anim");
 
             _element.append($box);
         }
 
-        function show(content, type) { }
+        function show(content, type) {
+            content = typeof content === "string" ? content : "";
+            var $msg = _element.find(".hy_message");
+            $msg.find(".hy_message_ctn").text(content);
+            if (!$msg.hasClass("hy_anim_enter")) {
+                $msg.addClass("hy_anim_enter");
+            }
+        }
 
-        function hide() { }
+        function hide() {
+            _element.find(".hy_message").removeClass("hy_anim_enter");
+        }
 
-        function destory() { }
+        function destory() {
+            _element.element();
+            _this = null;
+        }
 
 
         //实例对象
